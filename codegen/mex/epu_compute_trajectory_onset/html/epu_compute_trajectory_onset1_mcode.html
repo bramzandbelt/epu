@@ -1,0 +1,116 @@
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="1,1" id="srcline1">  1</a></span><span class="line"><span class="keyword">function</span> <span class="var type1" id="S2T2U3">t</span> = epu_compute_trajectory_onset(<span class="var type1" id="S3T1U6">X</span>,<span class="var type1" id="S4T1U7">Y</span>,<span class="var type1" id="S5T3U8">Z</span>) <span class="comment">%#codegen</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,2" id="srcline2">  2</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,3" id="srcline3">  3</a></span><span class="line"><span class="comment">% INPUTS</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,4" id="srcline4">  4</a></span><span class="line"><span class="comment">% X      - vector of time points with 1-ms increments (e.g. [-200:1:10])</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,5" id="srcline5">  5</a></span><span class="line"><span class="comment">% Y      - vector of activation trajectory</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,6" id="srcline6">  6</a></span><span class="line"><span class="comment">% Z      - scalar if full width of moving time window</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,7" id="srcline7">  7</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,8" id="srcline8">  8</a></span><span class="line"><span class="comment">% OUTPUT</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,9" id="srcline9">  9</a></span><span class="line"><span class="comment">% t      - trajectory onset (in ms)</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,10" id="srcline10"> 10</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,11" id="srcline11"> 11</a></span><span class="line"><span class="comment">% Bram Zandbelt, July 2012</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,12" id="srcline12"> 12</a></span><span class="line"><span class="comment">%</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,13" id="srcline13"> 13</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,14" id="srcline14"> 14</a></span><span class="line"><span class="comment">% OUTPUT</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,15" id="srcline15"> 15</a></span><span class="line"><span class="comment">% time from response when trajectory starts</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,16" id="srcline16"> 16</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,17" id="srcline17"> 17</a></span><span class="line"><span class="comment">% coder.extrinsic('movingslope');</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,18" id="srcline18"> 18</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,19" id="srcline19"> 19</a></span><span class="line"><span class="comment">% Pre-allocate arrays</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,20" id="srcline20"> 20</a></span><span class="line"><span class="mxinfo" id="T2:U5"><span class="var type1" id="S6T2U11">dVec</span> = <span class="mxinfo" id="T2:U7">nan(<span class="mxinfo" id="T3:U8">1</span>,<span class="mxinfo" id="T3:U9">length(<span class="var type1" id="S4T1U17">Y</span>)</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,21" id="srcline21"> 21</a></span><span class="line"><span class="mxinfo" id="T3:U11"><span class="var type1" id="S9T3U20">halfWindow</span> = <span class="mxinfo" id="T3:U13">nan(1,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,22" id="srcline22"> 22</a></span><span class="line"><span class="mxinfo" id="T3:U14"><span class="var type1" id="S2T3U27">t</span> = <span class="mxinfo" id="T3:U16">nan(1,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,23" id="srcline23"> 23</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,24" id="srcline24"> 24</a></span><span class="line"><span class="comment">% Estimate local slope, using sliding window</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,25" id="srcline25"> 25</a></span><span class="line"><span class="mxinfo" id="T2:U17"><span class="var type1" id="S6T2U34">dVec</span> = <span class="mxinfo" id="T2:U19"><span class="fcn" id="F412N3:B36">movingslope</span>(<span class="var type1" id="S4T1U37">Y</span>,<span class="var type1" id="S5T3U38">Z</span>,1,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,26" id="srcline26"> 26</a></span><span class="line"><span class="mxinfo" id="T3:U22"><span class="var type1" id="S9T3U43">halfWindow</span> = <span class="mxinfo" id="T3:U24">round(<span class="mxinfo" id="T3:U25">median(<span class="mxinfo" id="T2:U26">1:<span class="var type1" id="S5T3U50">Z</span></span>)</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,27" id="srcline27"> 27</a></span><span class="line"><span class="mxinfo" id="T2:U28"><span class="var type1" id="S2T2U53">t</span> = <span class="mxinfo" id="T2:U30"><span class="var type1" id="S3T1U55">X</span>(<span class="mxinfo" id="T2:U32"><span class="mxinfo" id="T2:U33">find(<span class="mxinfo" id="T38:U34"><span class="var type1" id="S6T2U60">dVec</span>&gt;<span class="mxinfo" id="T3:U36">0</span></span>,1)</span> + <span class="var type1" id="S9T3U63">halfWindow</span></span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,28" id="srcline28"> 28</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,29" id="srcline29"> 29</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,30" id="srcline30"> 30</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,31" id="srcline31"> 31</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,32" id="srcline32"> 32</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,33" id="srcline33"> 33</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,34" id="srcline34"> 34</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,35" id="srcline35"> 35</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,36" id="srcline36"> 36</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,37" id="srcline37"> 37</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,38" id="srcline38"> 38</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,39" id="srcline39"> 39</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,40" id="srcline40"> 40</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,41" id="srcline41"> 41</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,42" id="srcline42"> 42</a></span><span class="line"><span class="comment">% fullWidth = Z;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,43" id="srcline43"> 43</a></span><span class="line"><span class="comment">% halfWidth = round(Z/2);</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,44" id="srcline44"> 44</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,45" id="srcline45"> 45</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,46" id="srcline46"> 46</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,47" id="srcline47"> 47</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,48" id="srcline48"> 48</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,49" id="srcline49"> 49</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,50" id="srcline50"> 50</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,51" id="srcline51"> 51</a></span><span class="line"><span class="comment">% % Identify starting window</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,52" id="srcline52"> 52</a></span><span class="line"><span class="comment">% if max(X) &lt; halfWidth % If we cannot start with window around t=0</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,53" id="srcline53"> 53</a></span><span class="line"><span class="comment">%    iWindow = colon(length(X)-fullWidth,length(X));</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,54" id="srcline54"> 54</a></span><span class="line"><span class="comment">% else</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,55" id="srcline55"> 55</a></span><span class="line"><span class="comment">%    iWindow = find(X &gt;= -halfWidth &amp; X &lt;= halfWidth);</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,56" id="srcline56"> 56</a></span><span class="line"><span class="comment">% end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,57" id="srcline57"> 57</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,58" id="srcline58"> 58</a></span><span class="line"><span class="comment">% iPreResponseWindow = find(X == -fullWidth):find(X == 0);</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,59" id="srcline59"> 59</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,60" id="srcline60"> 60</a></span><span class="line"><span class="comment">% % Pre-response activation level</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,61" id="srcline61"> 61</a></span><span class="line"><span class="comment">% preResponseActivation = nanmean(Y(iPreResponseWindow));</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,62" id="srcline62"> 62</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,63" id="srcline63"> 63</a></span><span class="line"><span class="comment">% t = Inf;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,64" id="srcline64"> 64</a></span><span class="line"><span class="comment">% dtNonSignificant = 0;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,65" id="srcline65"> 65</a></span><span class="line"><span class="comment">% critA = false;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,66" id="srcline66"> 66</a></span><span class="line"><span class="comment">% critB = false;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,67" id="srcline67"> 67</a></span><span class="line"><span class="comment">% pval = double(0);</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,68" id="srcline68"> 68</a></span><span class="line"><span class="comment">% currentActivation = double(0);</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,69" id="srcline69"> 69</a></span><span class="line"><span class="comment">% preResponseActivation = double(0);</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,70" id="srcline70"> 70</a></span><span class="line"><span class="comment">% </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,71" id="srcline71"> 71</a></span><span class="line"><span class="comment">% while t &gt; 0</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,72" id="srcline72"> 72</a></span><span class="line"><span class="comment">%    </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,73" id="srcline73"> 73</a></span><span class="line"><span class="comment">%    % Compute correlation</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,74" id="srcline74"> 74</a></span><span class="line"><span class="comment">%    [~, pval] = corr(X(iWindow)',Y(iWindow)',<span class="keyword">...</span></span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,75" id="srcline75"> 75</a></span><span class="line"><span class="comment">%                     'type','Spearman',<span class="keyword">...</span><span class="comment"> % Spearman correlation</span></span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,76" id="srcline76"> 76</a></span><span class="line"><span class="comment">%                     'rows','complete',<span class="keyword">...</span><span class="comment"> % Consider non-NaN values only</span></span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,77" id="srcline77"> 77</a></span><span class="line"><span class="comment">%                     'tail','both');       % Two-tailed test</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,78" id="srcline78"> 78</a></span><span class="line"><span class="comment">%    </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,79" id="srcline79"> 79</a></span><span class="line"><span class="comment">%    % Compute current activation level</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,80" id="srcline80"> 80</a></span><span class="line"><span class="comment">%    currentActivation = nanmean(Y(iWindow));</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,81" id="srcline81"> 81</a></span><span class="line"><span class="comment">%    </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,82" id="srcline82"> 82</a></span><span class="line"><span class="comment">%    critA = ~(pval &lt; .05);</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,83" id="srcline83"> 83</a></span><span class="line"><span class="comment">%    critB = currentActivation &lt; preResponseActivation;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,84" id="srcline84"> 84</a></span><span class="line"><span class="comment">%    </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,85" id="srcline85"> 85</a></span><span class="line"><span class="comment">%    if (critA &amp;&amp; critB)</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,86" id="srcline86"> 86</a></span><span class="line"><span class="comment">%       </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,87" id="srcline87"> 87</a></span><span class="line"><span class="comment">%       t = median(X(iWindow)) + halfWidth;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,88" id="srcline88"> 88</a></span><span class="line"><span class="comment">%       break</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,89" id="srcline89"> 89</a></span><span class="line"><span class="comment">%       </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,90" id="srcline90"> 90</a></span><span class="line"><span class="comment">%       % N.B. CRITERION C IS NOT USED BECAUSE ABSENCE OF NOISE PREVENTS THAT</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,91" id="srcline91"> 91</a></span><span class="line"><span class="comment">%       % CORRELATIONS CONTINUE TO BE NON-SIGNIFICANT OVER MULTIPLE TRIALS</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,92" id="srcline92"> 92</a></span><span class="line"><span class="comment">%       </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,93" id="srcline93"> 93</a></span><span class="line"><span class="comment">%       %       dtNonSignificant = dtNonSignificant + 1;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,94" id="srcline94"> 94</a></span><span class="line"><span class="comment">%       %       </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,95" id="srcline95"> 95</a></span><span class="line"><span class="comment">%       %       % Check criteria c) and determine onset time if met</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,96" id="srcline96"> 96</a></span><span class="line"><span class="comment">%       %       if dtNonSignificant == halfWidth</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,97" id="srcline97"> 97</a></span><span class="line"><span class="comment">%       %          t = median(X(iWindow)) + halfWidth;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,98" id="srcline98"> 98</a></span><span class="line"><span class="comment">%       %          break</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,99" id="srcline99"> 99</a></span><span class="line"><span class="comment">%       %       end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,100" id="srcline100">100</a></span><span class="line"><span class="comment">%       %       </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,101" id="srcline101">101</a></span><span class="line"><span class="comment">%       %    else</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,102" id="srcline102">102</a></span><span class="line"><span class="comment">%       %       dtNonSignificant = 0;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,103" id="srcline103">103</a></span><span class="line"><span class="comment">%    end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,104" id="srcline104">104</a></span><span class="line"><span class="comment">%    </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,105" id="srcline105">105</a></span><span class="line"><span class="comment">%    % If the three criteria have not been met, onset is the median of the last</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,106" id="srcline106">106</a></span><span class="line"><span class="comment">%    % window</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,107" id="srcline107">107</a></span><span class="line"><span class="comment">%    if min(iWindow) == 1</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,108" id="srcline108">108</a></span><span class="line"><span class="comment">%       t = median(X(iWindow));</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,109" id="srcline109">109</a></span><span class="line"><span class="comment">%       break</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,110" id="srcline110">110</a></span><span class="line"><span class="comment">%    end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,111" id="srcline111">111</a></span><span class="line"><span class="comment">%    </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,112" id="srcline112">112</a></span><span class="line"><span class="comment">%    iWindow = iWindow - 1;</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,113" id="srcline113">113</a></span><span class="line"><span class="comment">%    </span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,114" id="srcline114">114</a></span><span class="line"><span class="comment">% end</span></span></span>
+</pre>

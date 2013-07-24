@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Code Generation Report</title>
+<link rel="stylesheet" type="text/css" href="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/eml_report.css" />
+<link rel="stylesheet" type="text/css" href="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/jQuery/ui.resizable.css" />
+<link rel="stylesheet" type="text/css" href="file:////Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset/html/index.css" />
+
+<script type="text/javascript" src="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/jQuery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/jQuery/jquery-ui-1.7.custom.min.js"></script>
+<script type="text/javascript" src="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/jQuery/jquery.tablesorter.mod.js"></script>
+<script type="text/javascript" src="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/jQuery/jquery.hotkeys-0.7.8.js"></script>
+<script type="text/javascript" src="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/eml_report_interactions.js"></script>
+<script type="text/javascript" src="file:////Applications/MATLAB_R2011b.app/toolbox/coder/coder/resources/eml_report_layout.js"></script>
+<script type="text/javascript">
+var localizedMessages = {
+    callSelectPrompt: "Select a function call:",
+    callSelectSource: "Calls from this function",
+    callSelectTarget: "Calls to this function",
+    infoForExpression: "Information for the selected expression:",
+    infoForVarHere: "Information for the selected variable:",
+    infoForVarThere: "Information for the selected variable:",
+    infoForVarNone: "This variable does not have information associated with it.",
+    infoForFilter: "Matched {0}/{1} functions, {2}/{3} methods"
+};
+var keyBindings = {
+        selectMCodeTab: "Ctrl+m",
+    selectCallStackTab: "Ctrl+k",
+        selectCCodeTab: "Ctrl+c",
+     selectCenterPanel: "Ctrl+w",
+      selectSummaryTab: "Ctrl+s",
+     selectMessagesTab: "Ctrl+a",
+    selectWatchListTab: "Ctrl+v",
+     selectBuildLogTab: "Ctrl+t"
+};
+var functionInfoTable = {
+ MATLABcode1: "epu_compute_trajectory_onset1_mcode.html",
+ fpath1: "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/epu_compute_trajectory_onset.m",
+ lines1: [1, 1, 115],
+ watch1: "epu_compute_trajectory_onset1_watch.html",
+ title1: "Function: <span class='functionname'><a title='/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/epu_compute_trajectory_onset.m' class='functionlink' href=\"matlab: open('/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/epu_compute_trajectory_onset.m')\">epu_compute_trajectory_onset</a></span>",
+ tcall1: [  ],
+ scall1: [ [ "From line 25 to movingslope", "412#srcline1" ] ],
+ MATLABcode364: "getcoef364_mcode.html",
+ fpath364: "/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m",
+ lines364: [209, 212, 220],
+ watch364: "getcoef364_watch.html",
+ title364: "Function: <span class='functionname'><a title='/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m' class='functionlink' href=\"matlab: open('/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m')\">movingslope &gt; getcoef</a></span>",
+ tcall364: [ [ "From movingslope line 180", "412#F364N4:B206" ], [ "From movingslope line 192", "412#F364N4:B274" ], [ "From movingslope line 199", "412#F364N4:B316" ] ],
+ scall364: [  ],
+ MATLABcode412: "movingslope412_mcode.html",
+ fpath412: "/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m",
+ lines412: [1, 1, 212],
+ watch412: "movingslope412_watch.html",
+ title412: "Function: <span class='functionname'><a title='/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m' class='functionlink' href=\"matlab: open('/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m')\">movingslope</a></span>",
+ tcall412: [ [ "From epu_compute_trajectory_onset line 25", "1#F412N3:B36" ] ],
+ scall412: [ [ "From line 180 to movingslope > getcoef", "364#srcline212" ], [ "From line 192 to movingslope > getcoef", "364#srcline212" ], [ "From line 199 to movingslope > getcoef", "364#srcline212" ] ],
+ rootFcnID: "1",
+ htmlRoot: "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset/html/"
+};
+var scriptInfoTable = {
+ fpath1: "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/epu_compute_trajectory_onset.m",
+ fpath2: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/length.m",
+ fpath3: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/eml_scalar_floor.m",
+ fpath4: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/floor.m",
+ fpath5: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/lang/error.m",
+ fpath6: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_scalar_eg.m",
+ fpath7: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_scalexp_alloc.m",
+ fpath8: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_index_class.m",
+ fpath9: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_min_or_max.m",
+ fpath10: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/datafun/min.m",
+ fpath11: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_is_float_class.m",
+ fpath12: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/eps.m",
+ fpath13: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_div.m",
+ fpath14: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/ops/rdivide.m",
+ fpath15: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/ops/mrdivide.p",
+ fpath16: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/eml_scalar_round.m",
+ fpath17: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/eml_scalar_abs.m",
+ fpath18: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/ops/mtimes.m",
+ fpath19: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/eml_scalar_mod.m",
+ fpath20: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/mod.m",
+ fpath21: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/isinf.m",
+ fpath22: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/isnan.m",
+ fpath23: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/isfinite.m",
+ fpath24: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/abs.m",
+ fpath25: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/ops/colon.m",
+ fpath26: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/ops/power.m",
+ fpath27: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/ops/mpower.m",
+ fpath28: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/realmin.m",
+ fpath29: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/realmax.m",
+ fpath30: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/intmax.m",
+ fpath31: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_index_minus.m",
+ fpath32: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_index_rdivide.m",
+ fpath33: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_index_times.m",
+ fpath34: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_index_plus.m",
+ fpath35: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_assert_valid_size_arg.m",
+ fpath36: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_index_prod.m",
+ fpath37: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/repmat.m",
+ fpath38: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_isequal_core.m",
+ fpath39: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/isequal.m",
+ fpath40: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_error.m",
+ fpath41: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_relop.m",
+ fpath42: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/datafun/max.m",
+ fpath43: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_blas_inline.m",
+ fpath44: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_use_refblas.m",
+ fpath45: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_threshold.m",
+ fpath46: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xnrm2.m",
+ fpath47: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_int.m",
+ fpath48: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xnrm2.m",
+ fpath49: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xnrm2.m",
+ fpath50: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/lapack/matlab/eml_matlab_zsvdc.m",
+ fpath51: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xscal.m",
+ fpath52: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xscal.m",
+ fpath53: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xscal.m",
+ fpath54: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xdot.m",
+ fpath55: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xdotx.m",
+ fpath56: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xdot.m",
+ fpath57: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xdot.m",
+ fpath58: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xdotc.m",
+ fpath59: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xaxpy.m",
+ fpath60: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_isa_uint.m",
+ fpath61: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xaxpy.m",
+ fpath62: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xaxpy.m",
+ fpath63: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_const_nonsingleton_dim.m",
+ fpath64: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/eml_scalar_sqrt.m",
+ fpath65: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/sqrt.m",
+ fpath66: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xrotg.m",
+ fpath67: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xrotg.m",
+ fpath68: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xrotg.m",
+ fpath69: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xrot.m",
+ fpath70: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xrot.m",
+ fpath71: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xrot.m",
+ fpath72: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xswap.m",
+ fpath73: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xswap.m",
+ fpath74: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xswap.m",
+ fpath75: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/lapack/internal/eml_lapack_xgesvd.m",
+ fpath76: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/lapack/eml_xgesvd.m",
+ fpath77: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/matfun/svd.m",
+ fpath78: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/external/eml_blas_xgemm.m",
+ fpath79: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/refblas/eml_refblas_xgemm.m",
+ fpath80: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xgemm.m",
+ fpath81: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/matfun/pinv.m",
+ fpath82: "/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m",
+ fpath83: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_prodsize_except_dim.m",
+ fpath84: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/datafun/filter.m",
+ fpath85: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/blas/eml_xdotu.m",
+ fpath86: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_sort_le.m",
+ fpath87: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/eml/eml_sort_idx.m",
+ fpath88: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/datafun/median.m",
+ fpath89: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elfun/round.m",
+ fpath90: "/Applications/MATLAB_R2011b.app/toolbox/eml/lib/matlab/elmat/find.m"
+};
+</script>
+</head>
+<body>
+
+<div class="west">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="MATLABcode"><span>MATLAB code</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="callstack"><span>Call stack</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="ccode"><span>C code</span></span></li>
+</ul>
+<div id="MATLABcodebody" class="ui-tabs-panel">
+<!-- Begin Filter -->
+<div class="grayline methodset" onclick="filterClick(event);">
+<a class="collapsed">Filter</a>
+</div>
+<div id="filterbody" class="hidden">
+<table class="myfunc-filter-tbl">
+<tr>
+<td title="Use this filter to display only functions and methods that contain variables or expressions with the specified attributes." colspan="2" class="checkbox">
+<div class="myfunc-filterby-chk"><input type="checkbox" class="filterenable" />
+<div class="filter-enable-lbl">Filter functions and methods</div></div></td></tr><tr>
+<td class="label"><div class="myfunc-filterby-lbl">Filter by:</div></td>
+<td class="select">
+<div class="filters">
+<select class="myfunc-filterby">
+<option id="size">Size</option>
+<option id="complex">Complexity</option>
+<option id="class">Class</option>
+</select>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="label"><div class="myfunc-filterstr-lbl">Filter:</div></td>
+<td class="input"><div>
+
+<div class="size">
+<select class="myfunc-filter size">
+<option value="1 364 412">1 x 1</option>
+<option value="1">1 x <b>:</b>1000000</option>
+<option value="1 364 412">1 x <b>:</b>?</option>
+<option value="364">2 x <b>:</b>?</option>
+<option value="364 412"><b>:</b>?</option>
+<option value="364"><b>:</b>? x 2</option>
+</select>
+</div>
+
+<div class="complex">
+<select class="myfunc-filter complex">
+<option value="">Complex values</option>
+<option value="1 364 412">Real values</option>
+</select>
+</div>
+<!-- Begin Class Filter -->
+<div class="class">
+<select class="myfunc-filter class">
+<option value="1 364 412">double</option>
+</select>
+</div>
+<!-- End Class Filter -->
+</div>
+</td>
+</tr>
+</table>
+<div class="myfunc-count"></div>
+</div>
+<!-- End Filter -->
+<div class="grayline methodset" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionSetClick(event);">
+<a class="expanded">Functions</a>
+</div>
+<!-- Begin Function Tree -->
+<div id="functiontreebody">
+<div class="functionwrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="functionTreeClick(event);">
+<ol class="tree">
+<!-- Begin Function Tree Roots -->
+<li class="leaf  passed"><a href="#" class="fcn" id="F1N2:F1">epu_compute_trajectory_onset</a></li>
+<li class="leaf  warning"><a href="#" class="fcn" id="F412N3:F2">movingslope</a></li>
+<li class="leaf  warning"><a href="#" class="fcn" id="F364N4:F3">movingslope &gt; getcoef</a></li>
+<!-- End Function Tree Roots -->
+</ol>
+<!-- Function Tree Nodes -->
+<div class="functiontreenodes hidden">
+</div>
+<!-- End Function Tree Nodes -->
+</div>
+</div>
+<!-- End Function Tree -->
+</div>
+<!-- Begin Call Tree -->
+<div id="callstackbody" class="ui-tabs-panel hidden">
+<div class="treewrapper" onmouseover="callTreeMouseOver(event);" onmouseout="callTreeMouseOut(event);" onclick="callTreeClick(event);">
+<ol class="tree">
+<!-- Call Tree Root -->
+<li class="node collapsed passed"><a href="#" class="fcn" id="F1N2:L1">epu_compute_trajectory_onset</a>
+<ul>
+<li class="node collapsed warning"><a href="#" class="fcn" id="F412N3:L2">movingslope</a></li>
+</ul>
+</li>
+</ol>
+<!-- Call Tree Nodes -->
+<div class="callstacknodes hidden">
+<ol class="callstacknode" id="callstacknode1">
+
+<li class="node collapsed passed"><a href="#" class="fcn" id="F1N2:l1">epu_compute_trajectory_onset</a>
+<ul>
+<li class="node collapsed warning"><a href="#" class="fcn" id="F412N3:l2">movingslope</a></li>
+</ul>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode364">
+
+<li class="leaf warning"><a href="#" class="fcn" id="F364N4:l3">movingslope &gt; getcoef</a>
+</li>
+</ol>
+<ol class="callstacknode" id="callstacknode412">
+
+<li class="node collapsed warning"><a href="#" class="fcn" id="F412N3:l4">movingslope</a>
+<ul>
+<li class="leaf warning"><a href="#" class="fcn" id="F364N4:l5">movingslope &gt; getcoef</a></li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<!-- End Call Tree -->
+<div id="ccodebody" class="ui-tabs-panel hidden">
+<table class="myfunc-list" cellspacing="0" cellpadding="0" onclick="cFileClick(event);">
+<tbody>
+<tr class="subtitle"><td><div><b>Target Source Files</b></div></td></tr>
+<tr class="ccode" id="colon_c.html"><td class="ccode"><a href="#">colon.c</a></td></tr>
+<tr class="ccode" id="colon_h.html"><td class="ccode"><a href="#">colon.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_api_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_api.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_api_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_api.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_data_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_data.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_data_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_data.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_emxutil_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_emxutil.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_emxutil_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_emxutil.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_initialize_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_initialize.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_initialize_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_initialize.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_mex_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_mex.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_mexutil_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_mexutil.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_mexutil_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_mexutil.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_terminate_c.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_terminate.c</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_terminate_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_terminate.h</a></td></tr>
+<tr class="ccode" id="epu_compute_trajectory_onset_types_h.html"><td class="ccode"><a href="#">epu_compute_trajectory_onset_types.h</a></td></tr>
+<tr class="ccode" id="error_c.html"><td class="ccode"><a href="#">error.c</a></td></tr>
+<tr class="ccode" id="error_h.html"><td class="ccode"><a href="#">error.h</a></td></tr>
+<tr class="ccode" id="filter_c.html"><td class="ccode"><a href="#">filter.c</a></td></tr>
+<tr class="ccode" id="filter_h.html"><td class="ccode"><a href="#">filter.h</a></td></tr>
+<tr class="ccode" id="median_c.html"><td class="ccode"><a href="#">median.c</a></td></tr>
+<tr class="ccode" id="median_h.html"><td class="ccode"><a href="#">median.h</a></td></tr>
+<tr class="ccode" id="mod_c.html"><td class="ccode"><a href="#">mod.c</a></td></tr>
+<tr class="ccode" id="mod_h.html"><td class="ccode"><a href="#">mod.h</a></td></tr>
+<tr class="ccode" id="movingslope_c.html"><td class="ccode"><a href="#">movingslope.c</a></td></tr>
+<tr class="ccode" id="movingslope_h.html"><td class="ccode"><a href="#">movingslope.h</a></td></tr>
+<tr class="ccode" id="mrdivide_c.html"><td class="ccode"><a href="#">mrdivide.c</a></td></tr>
+<tr class="ccode" id="mrdivide_h.html"><td class="ccode"><a href="#">mrdivide.h</a></td></tr>
+<tr class="ccode" id="pinv_c.html"><td class="ccode"><a href="#">pinv.c</a></td></tr>
+<tr class="ccode" id="pinv_h.html"><td class="ccode"><a href="#">pinv.h</a></td></tr>
+<tr class="ccode" id="rt_nonfinite_h.html"><td class="ccode"><a href="#">rt_nonfinite.h</a></td></tr>
+<tr class="ccode" id="rtwtypes_h.html"><td class="ccode"><a href="#">rtwtypes.h</a></td></tr>
+<tr class="ccode" id="sqrt_c.html"><td class="ccode"><a href="#">sqrt.c</a></td></tr>
+<tr class="ccode" id="sqrt_h.html"><td class="ccode"><a href="#">sqrt.h</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="aux hidden">
+<div class="tooltips">
+<div class="tooltip" id="TT1"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>1000000</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT2"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>?</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT3"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT4"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT5"><table class="tooltip"><tr><th>Size</th><td>1 x 74</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT6"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT7"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>cell</td></tr></table></div>
+<div class="tooltip" id="TT8"><table class="tooltip"><tr><th>Size</th><td>1 x 3</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT9"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT10"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>coder.internal.indexInt</td></tr></table></div>
+<div class="tooltip" id="TT11"><table class="tooltip"><tr><th>Size</th><td>1 x 5</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT12"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int32</td></tr></table></div>
+<div class="tooltip" id="TT13"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT14"><table class="tooltip"><tr><th>Size</th><td>1 x 83</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT15"><table class="tooltip"><tr><th>Size</th><td>1 x 45</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT16"><table class="tooltip"><tr><th>Size</th><td>1 x 6</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT17"><table class="tooltip"><tr><th>Size</th><td><b>:</b>?</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT18"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int32</td></tr></table></div>
+<div class="tooltip" id="TT19"><table class="tooltip"><tr><th>Size</th><td><b>:</b>? x 2</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT20"><table class="tooltip"><tr><th>Size</th><td>1 x 2</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT21"><table class="tooltip"><tr><th>Size</th><td>1 x 7</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT22"><table class="tooltip"><tr><th>Size</th><td>1 x 31</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT23"><table class="tooltip"><tr><th>Size</th><td>2 x <b>:</b>?</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT24"><table class="tooltip"><tr><th>Size</th><td>1 x 33</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT25"><table class="tooltip"><tr><th>Size</th><td>1 x 4</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT26"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int8</td></tr></table></div>
+<div class="tooltip" id="TT27"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT28"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT29"><table class="tooltip"><tr><th>Size</th><td>0 x 0</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT30"><table class="tooltip"><tr><th>Size</th><td>2</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT31"><table class="tooltip"><tr><th>Size</th><td><b>:</b>? x <b>:</b>?</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT32"><table class="tooltip"><tr><th>Size</th><td>1 x 30</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT33"><table class="tooltip"><tr><th>Size</th><td>1 x 5</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT34"><table class="tooltip"><tr><th>Size</th><td>2 x 2</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>double</td></tr></table></div>
+<div class="tooltip" id="TT35"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>function_handle</td></tr></table></div>
+<div class="tooltip" id="TT36"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>?</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int32</td></tr></table></div>
+<div class="tooltip" id="TT37"><table class="tooltip"><tr><th>Size</th><td><b>:</b>?</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int32</td></tr></table></div>
+<div class="tooltip" id="TT38"><table class="tooltip"><tr><th>Size</th><td>1 x <b>:</b>?</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT39"><table class="tooltip"><tr><th>Size</th><td>1 x 0</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int32</td></tr></table></div>
+<div class="tooltip" id="TT40"><table class="tooltip"><tr><th>Size</th><td>0 x 0</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int32</td></tr></table></div>
+<div class="tooltip" id="TT41"><table class="tooltip"><tr><th>Size</th><td>0</td></tr><tr><th>Complex</th><td>No</td></tr><tr><th>Class</th><td>int32</td></tr></table></div>
+<div class="tooltip" id="TT42"><table class="tooltip"><tr><th>Size</th><td>1 x 0</td></tr><tr><th>Class</th><td>logical</td></tr></table></div>
+<div class="tooltip" id="TT43"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>mxArray</td></tr></table></div>
+<div class="tooltip" id="TT44"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT45"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT46"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT47"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT48"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT49"><table class="tooltip"><tr><th>Size</th><td>1 x 21</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT50"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT51"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT52"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT53"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT54"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT55"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT56"><table class="tooltip"><tr><th>Size</th><td>1 x 28</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT57"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT58"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT59"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT60"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT61"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT62"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT63"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT64"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT65"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT66"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT67"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT68"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT69"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT70"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT71"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT72"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT73"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT74"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT75"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT76"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT77"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT78"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT79"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT80"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT81"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT82"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT83"><table class="tooltip"><tr><th>Size</th><td>1 x 36</td></tr><tr><th>Class</th><td>char</td></tr></table></div>
+<div class="tooltip" id="TT84"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT85"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT86"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT87"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT88"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT89"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT90"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+<div class="tooltip" id="TT91"><table class="tooltip"><tr><th>Size</th><td>1 x 1</td></tr><tr><th>Class</th><td>unknown</td></tr></table></div>
+</div>
+</div>
+
+<div class="south">
+<ul class="ui-tabs-nav">
+<li class="ui-tabs-nav-item ui-tabs-selected"><span class="tab-link" id="summary"><span>Summary</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="messages"><span>All Messages (2)</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="watchlist"><span>Variables</span></span></li>
+<li class="ui-tabs-nav-item hidden"><span class="tab-link" id="watchload"><span>Variables</span></span></li>
+<li class="ui-tabs-nav-item"><span class="tab-link" id="buildlog1"><span>Target Build Log</span></span></li>
+</ul>
+
+<!-- Compilation Summary -->
+<div id="summarybody" class="ui-tabs-panel">
+<table cellpadding="1" cellspacing="4">
+<tr><td>C source code generated on:</td><td>31-Jul-2012 11:04:53</td></tr>
+<tr><td>Coding target:</td><td>C MEX Function</td></tr>
+<tr><td>Number of errors:</td><td><a href="javascript:selectMessagesTab();">0</a></td></tr>
+<tr><td>Number of warnings:</td><td><a href="javascript:selectMessagesTab();">2</a></td></tr>
+</table>
+<p/><p/><table>
+<tr><td><b>Tell Us What You Think</b></td></tr>
+<tr><td>We value your feedback. Please take a few minutes to answer this short questionnaire regarding the Code Generation Report.</td></tr>
+<tr><td><a href="matlab: web('http://www.customersat3.com/TakeSurvey.asp?si=ELu7GTnTYtk%3D','-browser');">&gt;&gt;Provide Feedback</a></td></tr>
+</table>
+</div>
+
+<!-- Message Table -->
+<div id="messagesbody" class="ui-tabs-panel hidden">
+<table class="grid" summary="This table lists the messages produced during code generation." cellspacing="0" cellpadding="6">
+<thead>
+<tr>
+<th id="msgorder" scope="col"><div class="d1"><div class="d2"><a href="#">Order</a></div></div></th>
+<th id="msgtype" scope="col"><div class="d1"><div class="d2"><a href="#">Type</a></div></div></th>
+<th id="function" scope="col"><div class="d1"><div class="d2"><a href="#">Function</a></div></div></th>
+<th id="location" scope="col"><div class="d1"><div class="d2"><a href="#">Line</a></div></div></th>
+<th id="text" scope="col"><div class="d1"><div class="d2"><a href="#">Description</a></div></div></th>
+</tr>
+</thead>
+<tbody onmouseover="messagesMouseOver(event);" onmouseout="messagesMouseOut(event);" onclick="messagesClick(event);"">
+<tr class="message warning" id="M1F364">
+<td class="msgorder" headers="msgorder"><a href="#">1</a></td>
+<td class="warning" headers="msgtype"></td>
+<td class="function" headers="function"><div>movingslope &gt; getcoef</div></td>
+<td class="location" headers="location"><div>212</div></td>
+<td class="text" headers="text"><div>Missing %#codegen in 'movingslope/getcoef.m'. <br/>Add %#codegen to this file to indicate that it is suitable for code generation. <br/>(The full path to 'movingslope/getcoef.m' is '/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m!getcoef'.)</div></td>
+</tr>
+<tr class="message warning" id="M2F412">
+<td class="msgorder" headers="msgorder"><a href="#">2</a></td>
+<td class="warning" headers="msgtype"></td>
+<td class="function" headers="function"><div>movingslope</div></td>
+<td class="location" headers="location"><div>1</div></td>
+<td class="text" headers="text"><div>Missing %#codegen in 'movingslope.m'. <br/>Add %#codegen to this file to indicate that it is suitable for code generation. <br/>(The full path to 'movingslope.m' is '/Users/bram/Dropbox/Matlab/derrico_john/movingslope/movingslope.m'.)</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Watchlist Table -->
+<div id="watchlistbody" class="ui-tabs-panel hidden">
+</div>
+<div id="watchloadbody" class="ui-tabs-panel hidden">
+Loading Variables table ...
+</div>
+
+<!-- Target Build Log -->
+<div id="buildlog1body" class="ui-tabs-panel hidden">
+<div class="grayline"></div>
+<table cellpadding="4" cellspacing="1"><tr>
+<td align="left" class="td-linebottomrt-gray" colspan="2">Build Parameters</td>
+</tr>
+<tr><td align="left" valign="top" class="td-linebottomrt">Build directory</td>
+<td align="left" valign="top" class="td-linebottomrt-link"><a href="matlab: cd('/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset')">/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset</a></td></tr>
+<tr><td align="left" valign="top" class="td-linebottomrt">Make wrapper</td>
+<td align="left" valign="top" class="td-linebottomrt-link">sh epu_compute_trajectory_onset_mex.sh</td></tr>
+</table>
+<br/>
+<table border="1" cellpadding="4" cellspacing="1" width="100%">
+<tr><td align="left" class="td-linebottomrt-gray">Build Log</td></tr>
+<tr><td valign="top" class="td-script">
+<pre>
+<span class="td-line-number">    1   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset_mexutil.c"</span>
+<span class="td-line-number">    2   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset_data.c"</span>
+<span class="td-line-number">    3   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset.c"</span>
+<span class="td-line-number">    4   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "movingslope.c"</span>
+<span class="td-line-number">    5   </span><span class="td-line-error">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "error.c"</span>
+<span class="td-line-number">    6   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "mod.c"</span>
+<span class="td-line-number">    7   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "mrdivide.c"</span>
+<span class="td-line-number">    8   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "colon.c"</span>
+<span class="td-line-number">    9   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "pinv.c"</span>
+<span class="td-line-number">   10   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "sqrt.c"</span>
+<span class="td-line-number">   11   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "filter.c"</span>
+<span class="td-line-number">   12   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "median.c"</span>
+<span class="td-line-number">   13   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset_initialize.c"</span>
+<span class="td-line-number">   14   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset_terminate.c"</span>
+<span class="td-line-number">   15   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset_api.c"</span>
+<span class="td-line-number">   16   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset_emxutil.c"</span>
+<span class="td-line-number">   17   </span><span class="td-line-normal">llvm-gcc-4.2 -c -fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions -DMX_COMPAT_32 -O2 -DNDEBUG  -I "/Applications/MATLAB_R2011b.app/extern/include" -I "/Applications/MATLAB_R2011b.app/simulink/include" -I "/Applications/MATLAB_R2011b.app/toolbox/shared/simtargets" -I "/Applications/MATLAB_R2011b.app/rtw/ext_mode/common" -I "/Applications/MATLAB_R2011b.app/rtw/c/src/ext_mode/common" -I "/Users/bram/Documents/EPU/Simulation_2012Jul19/m-files/codegen/mex/epu_compute_trajectory_onset" "epu_compute_trajectory_onset_mex.c"</span>
+<span class="td-line-number">   18   </span><span class="td-line-error">llvm-gcc-4.2 -Wl,-exported_symbols_list,epu_compute_trajectory_onset_mex_mex.map -Wl,-twolevel_namespace -undefined error -arch x86_64 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5 -bundle  -O -o epu_compute_trajectory_onset_mex.mexmaci64  epu_compute_trajectory_onset_mexutil.o epu_compute_trajectory_onset_data.o epu_compute_trajectory_onset.o movingslope.o error.o mod.o mrdivide.o colon.o pinv.o sqrt.o filter.o median.o epu_compute_trajectory_onset_initialize.o epu_compute_trajectory_onset_terminate.o epu_compute_trajectory_onset_api.o epu_compute_trajectory_onset_emxutil.o epu_compute_trajectory_onset_mex.o  -L/Applications/MATLAB_R2011b.app/bin/maci64 -lmx -lmex -lmat -lstdc++ -lemlrt -lut -lmwmathutil -lmwblascompat32</span>
+</pre>
+</td></tr></table>
+
+</div>
+</div>
+<!-- Begin MATLAB Code Panel -->
+<div class="center">
+<div class="center-title">
+<div class="ui-tabs-nav-item ui-tabs-selected">
+<span class="functiontitle">
+</span>
+<!-- Begin Call Sites -->
+<span id="callsiteselecttable" class="call-sites-tbl">
+<span id="callsiteselectlabel" class="filtered">Calls:</span>
+<select id="callsiteselect" onchange="callSiteChange(event)">
+<option value="callsiteprompt">Select a function call:</option>
+</select>
+</span>
+<!-- End Call Sites -->
+</div>
+</div>
+<div class="ui-tabs-panel">
+<div class="code" onmouseover="mcodeMouseOver(event);" onmouseout="mcodeMouseOut(event);"onclick="mcodeClick(event);">
+</div>
+</div>
+</div>
+<!-- End MATLAB Code Panel -->
+</body>
+
+</html>

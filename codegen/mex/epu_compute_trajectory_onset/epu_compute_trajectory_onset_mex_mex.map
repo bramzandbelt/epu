@@ -1,0 +1,4 @@
+_mexFunction
+_epu_compute_trajectory_onset
+_epu_compute_trajectory_onset_initialize
+_epu_compute_trajectory_onset_terminate

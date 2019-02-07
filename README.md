@@ -5,6 +5,8 @@ This repository contains simulation code, accompanying the paper:
 
 Zandbelt, B., Purcell, B. A., Palmeri, T. J., Logan, G. D., & Schall, J. D. (2014). Response times from ensembles of accumulators. Proceedings of the National Academy of Sciences, 111(7), 2848–2853. (https://doi.org/10.1073/pnas.1310577111)[https://doi.org/10.1073/pnas.1310577111].
 
+![](./Fig1.pdf)
+
 _E pluribus unum (EPU)_ is an ensemble model of response time that embodies the well-known dictum "out of many, one". It can be used to simulate ensembles of redundant, idiosyncratic stochastic accumulators (of varying size) under various termination mechanisms and accumulation rate correlations. The model was developed to investigate how a response time that can be explained by a single model accumulator (as predicted by models from mathematical psychology) arise from numerous, redundant accumulator neurons, each of which individually appears to explain the variability of RT (as observed empirically by neurophysiologists)?
 
 ## Getting started

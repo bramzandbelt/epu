@@ -1,9 +1,10 @@
-# E pluribus unum - out of many accumulators one response time
+# _E pluribus unum_ - out of many accumulators, one RT
 
 ## Overview
 This repository contains simulation code, accompanying the paper:
 
 Zandbelt, B., Purcell, B. A., Palmeri, T. J., Logan, G. D., & Schall, J. D. (2014). Response times from ensembles of accumulators. Proceedings of the National Academy of Sciences, 111(7), 2848–2853. (https://doi.org/10.1073/pnas.1310577111)[https://doi.org/10.1073/pnas.1310577111].
+
 
 ![](./EPU_Fig1.png)
 
